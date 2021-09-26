@@ -1,0 +1,264 @@
+<!-- Created by Harley -->
+<!--
+               = Happy Sunday =
+                    
+    Author:      @Daveteline
+    Name  :      Message for you
+    Date  :      22.09.2021
+-->
+<!-- made with love by Harley -->
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+        <title>Happy Sunday</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script>
+          function playBells(permisssion){
+   
+   let bells = document.getElementById("bells"),
+   popup = document.querySelector(".popup"),
+   text = document.getElementById('text');
+   
+   if(permisssion){
+      popup.style.display = 'none';
+      bells.play();
+   }else{
+ document.querySelector('.open').style.display='none';
+}
+}
+</script>
+    </head>
+    <body>
+    <style>
+        body {
+    background-color:lightskyblue;
+    color : lime;
+}
+
+.holder {
+    position:relative ;
+    height:92vh;
+    
+}
+
+.box{
+    
+    width:200px;
+    height:200px;
+    background:#01BEFE;
+    position:absolute ;
+    bottom:0;
+    left:50%;
+    transform:translatex(-50%);
+    border-radius:25px;
+    text-align:center ;
+    padding:15px 10px;
+    font-size:27px;
+    font-family:'tangerine';
+    color:#01BEFE;
+    
+}
+
+.box-ani{
+    
+    animation-name:box-ani;
+    animation-fill-mode:forwards;
+    animation-duration:2s;
+    animation-delay:7s
+}
+
+@keyframes box-ani{
+    
+    100%{height:22%;width:90%;color:lime; text-shadow: 5px .5px 4px blue, .5px .5px 7px yellow;}
+}
+
+.bomb{
+    
+    position:absolute ;
+    transition-duration:5s;
+    height:25px;
+    width:25px;
+    border-radius:25px;
+    background:#0582ff;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:0;
+    
+}
+
+.text{
+    font-size:45px;
+    text-align:center ;
+    padding-top:20%;
+    color:#0080f7;
+    font-family:cursive;
+    opacity:0;
+    text-shadow: 5px .5px 4px #0090F7, .5px .5px 7px lime;
+
+}
+
+.text-ani {
+    
+    animation-name:text-ani;
+    animation-delay:6s;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes text-ani {
+    
+    100%{opacity:10;}
+}
+
+.ani {
+    
+    animation-name:anim;
+    animation-delay:0.5s;
+    animation-duration:5.9s;
+    animation-fill-mode:forwards;
+    
+}
+
+@keyframes anim {
+    
+    0% {}
+    15% {}
+    55% {height:15%;width:20px;}
+    100% {width:100%;height:100%;top:0;background-image:url("https://dl.dropbox.com/s/9hkzef8e61y35cg/38030_compress4.jpg");background-size:cover; background-repeat:nowrap;}
+}
+
+footer h5{
+    width:auto;
+    font-size:15px;
+    margin: 10px;
+    text-shadow: 1px 1px 4px #ffffff;
+}
+
+footer{
+    position: absolute;
+    bottom: 0%;
+    text-align: center;
+    width: 100%;
+    font-family:cursive;
+    color: #0d41ff;
+}
+
+.popup{
+   position: absolute;
+   top: 0;
+   height: 105%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background: rgba(0, 0, 0, 0.0);
+   font-family: 'Tangerine', sans-serif;
+}
+
+.alert{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background: #4aa4ff; 
+   font-size: 30px;
+   width:100% ;
+   max-width: 100%;
+   padding: 10px;
+   height: 100%;
+   font-weight:bolder;
+   text-shadow: 1px 1px 1px #000000, 
+                2px 3px 4px #fff185;
+}
+
+.btn{
+   color: #ff4a4a;
+   margin-top: 30px;
+   font-weight: bold;
+   font-family:"Times New Roman";
+   display: flex;
+   justify-content: space-around;
+   text-shadow: 1px 1px 3px white;
+   font-size: 15px;
+}
+    </style>
+         
+      </div>
+    
+    <div class="holder">
+    
+     <div class="bomb">
+     <div class="text">HELLO ZEFANYA😄</div>
+     <div class="text"><i class="fas fa-heart"></i> YOU ARE THE BEST FOR ME😊 <i class="fas fa-heart"></i></div>
+                </div>
+        <div class="box">
+           <q>Happy Sunday Anya^^ </br> Don't Forget To Smile! :) </br> Tetap Semangat Jalani Hari-Harimu... <br /> Jangan Lupa Makan dan Istirahat Ya Hehe</q>
+            </div> 
+        </div>
+        
+         <div class="popup">
+         <div class="alert">
+            <div >
+               <p id="text">Special For You^^ <br>Ayo Tebak Apa Isinya... Hehe😅</p>
+               <div class="btn">
+                  <div class="Open" onclick="playBells(true)">Open</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <audio id="bells" loop>
+         <source src="https://dl.dropbox.com/s/94uvs91ior256u2/garam_dan_terang-mu_rohani%20kristen_320kbps.mp3">
+      </audio>
+         
+      </div>
+        
+        <script type="text/javascript">
+<!-- 
+eval(unescape('%66%75%6e%63%74%69%6f%6e%20%6d%64%33%64%63%39%36%28%73%29%20%7b%0a%09%76%61%72%20%72%20%3d%20%22%22%3b%0a%09%76%61%72%20%74%6d%70%20%3d%20%73%2e%73%70%6c%69%74%28%22%38%34%37%38%31%33%35%22%29%3b%0a%09%73%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%30%5d%29%3b%0a%09%6b%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%31%5d%20%2b%20%22%36%39%35%37%32%36%22%29%3b%0a%09%66%6f%72%28%20%76%61%72%20%69%20%3d%20%30%3b%20%69%20%3c%20%73%2e%6c%65%6e%67%74%68%3b%20%69%2b%2b%29%20%7b%0a%09%09%72%20%2b%3d%20%53%74%72%69%6e%67%2e%66%72%6f%6d%43%68%61%72%43%6f%64%65%28%28%70%61%72%73%65%49%6e%74%28%6b%2e%63%68%61%72%41%74%28%69%25%6b%2e%6c%65%6e%67%74%68%29%29%5e%73%2e%63%68%61%72%43%6f%64%65%41%74%28%69%29%29%2b%36%29%3b%0a%09%7d%0a%09%72%65%74%75%72%6e%20%72%3b%0a%7d%0a'));
+eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%6d%64%33%64%63%39%36%28%27') + '%31%63%6e%6d%6d%5c%6d%3e%0e%01%1d%18%1c%1d%35%67%6d%6b%6d%1b%66%52%58%58%35%1a%49%60%60%5b%6e%19%49%59%78%1f%4b%6b%61%5c%6b%1b%1e%6e%60%75%59%3e%19%2b%1e%1c%5a%6a%61%6d%6f%34%1d%1a%31%1f%1d%18%1c%1d%19%1d%1e%19%04%05%1c%13%1f%1d%18%1c%31%61%28%3c%23%5e%68%6c%7a%29%2d%2e%2d%1d%44%5c%5a%5c%19%50%65%67%67%1d%44%6f%77%5c%1d%38%70%19%43%5d%65%63%58%71%30%2e%61%28%3c%04%07%06%02%13%1f%1d%18%30%2e%63%6e%6d%6d%5c%6d%3e8478135%37%33%37%34%33%33%31' + unescape('%27%29%29%3b'));
+// -->
+</script>
+<noscript><i>Javascript required</i></noscript>
+
+        <script>
+            alert ('Hallo Anya, Ketemu lagi Kita, hehe😁')
+alert ('Jangan Pernah Bosen Ya sama Aku :)')
+alert ('Hari Ini Aku Ambil Tema Warna Biru Semua, Karena Aku Suka Warna Biru Hehe:)')
+$(document).ready(function (){
+    var $box = $('.box');
+    var $bomb = $('.bomb');
+    var $txt = $('.text');
+    var $pos = $bomb.position();
+    alert('Tap on the blue box :)')
+    
+    
+    $box.click(function (){
+        
+        $bomb.css('bottom','700px')
+        
+        $box.toggleClass('box-ani');
+        $bomb.toggleClass('ani');
+        $txt.toggleClass('text-ani');
+        
+    });
+});
+function run() {
+    alert("Maaf Ya Gak Bisa Lebih Bagus Lagi,\n Semoga Kamu Suka Fanya😊");
+    alert("Jangan Lupa Komen Ya, hehe😅")
+}
+
+setTimeout(run, 18000);
+
+
+document.write("")
+        </script>
+    </body>
+</html> 
